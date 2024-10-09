@@ -22,7 +22,7 @@ import {
 import useSearchFormSubmit from "@/hooks/use-search-form-submit";
 import OffCanvas from "@/components/common/off-canvas";
 
-const HeaderTwo = ({ style_2 = false }) => {
+const HeaderTwo = ({ style_2 = true }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
   const [isOffCanvasOpen, setIsCanvasOpen] = useState(false);
   const { setSearchText, handleSubmit, searchText } = useSearchFormSubmit();
@@ -45,17 +45,18 @@ const HeaderTwo = ({ style_2 = false }) => {
                     <div className="tp-header-info-item">
                       <a href="#">
                         <span>
-                          <Facebook />
+                          <Facebook /> 2.2k Followers
                         </span>{" "}
-                        7500k Followers
+                    
+                   
                       </a>
                     </div>
                     <div className="tp-header-info-item">
                       <a href="tel:966-595-035-008">
                         <span>
-                          <PhoneTwo />
+                          <PhoneTwo />  +01742959042
                         </span>{" "}
-                        +01786636915
+                       
                       </a>
                     </div>
                   </div>
