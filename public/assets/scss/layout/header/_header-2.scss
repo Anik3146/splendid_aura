@@ -6,6 +6,13 @@
 .#{$theme-prifix}-header{
     $self : &;
     &-top{
+        &-2{
+            background-color: #CE4584;
+            @media #{$lg, $md, $sm, $xs}{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
         &-border{
             border-bottom: 1px solid rgba($color: $black, $alpha: .1);
         }
@@ -111,7 +118,7 @@
                     & li{
                         & a{
                             &:hover{
-                                color: var(--tp-theme-primary);
+                                color: var(--tp-theme-secondary);
                             }
                         }
                     }

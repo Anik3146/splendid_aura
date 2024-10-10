@@ -7,7 +7,7 @@ import { useGetAllProductsQuery } from "@/redux/features/productApi";
 import ErrorMsg from "@/components/common/error-msg";
 import ShopHiddenSidebarArea from "@/components/shop/shop-hidden-sidebar-area";
 import ShopFilterOffCanvas from "@/components/common/shop-filter-offcanvas";
-import Footer from "@/layout/footers/footer";
+import FooterTwo from "@/layout/footers/footer-2";
 import ShopHiddenLoader from "@/components/loader/shop/shop-hidden-loader";
 
 const ShopHiddenSidebarPage = () => {
@@ -104,7 +104,7 @@ const ShopHiddenSidebarPage = () => {
       <HeaderTwo style_2={true} />
       <ShopBreadcrumb title="Shop Hidden Sidebar" subtitle="Shop Hidden Sidebar" />
       {content}
-      <Footer primary_style={true} />
+      <FooterTwo />
     </Wrapper>
   );
 };

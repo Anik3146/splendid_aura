@@ -42,10 +42,10 @@ const HeaderTwo = ({ style_2 = true }) => {
               <div className="row align-items-center">
                 <div className="col-md-6">
                   <div className="tp-header-info d-flex align-items-center">
-                    <div className="tp-header-info-item">
+                    <div className="tp-header-info-item ">
                       <a href="#">
-                        <span>
-                          <Facebook /> 2.2k Followers
+                        <span className="text-white">
+                          <Facebook />{" "} 2.2k Followers
                         </span>{" "}
                     
                    
@@ -53,8 +53,8 @@ const HeaderTwo = ({ style_2 = true }) => {
                     </div>
                     <div className="tp-header-info-item">
                       <a href="tel:966-595-035-008">
-                        <span>
-                          <PhoneTwo />  +01742959042
+                        <span className="text-white">
+                          <PhoneTwo />{" "}  +01742959042
                         </span>{" "}
                        
                       </a>
@@ -86,8 +86,8 @@ const HeaderTwo = ({ style_2 = true }) => {
                           src={logo}
                           alt="logo"
                           priority
-                          width={50}
-                          height={50}
+                          width={80}
+                          height={80}
                         />
                       </Link>
                     </div>

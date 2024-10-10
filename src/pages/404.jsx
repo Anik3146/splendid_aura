@@ -4,7 +4,7 @@ import Link from "next/link";
 // internal
 import SEO from "@/components/seo";
 import HeaderTwo from "@/layout/headers/header-2";
-import Footer from "@/layout/footers/footer";
+import FooterTwo from "@/layout/footers/footer-2";
 import Wrapper from "@/layout/wrapper";
 import error from '@assets/img/error/error.png';
 
@@ -38,7 +38,7 @@ const ErrorPage = () => {
         </div>
       </section>
       {/* 404 area end */}
-      <Footer primary_style={true} />
+      <FooterTwo/>
     </Wrapper>
   );
 };

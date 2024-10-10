@@ -73,10 +73,10 @@ function ProfileSetting({active,handleActive}) {
     <div className="tp-header-top-menu-item tp-header-setting">
       <span
         onClick={() => handleActive('setting')}
-        className="tp-header-setting-toggle"
+        className="tp-header-setting-toggle text-white"
         id="tp-header-setting-toggle"
       >
-        Setting
+       Settings
       </span>
       <ul className={active === 'setting' ? "tp-setting-list-open" : ""}>
         <li>

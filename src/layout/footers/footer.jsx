@@ -2,27 +2,23 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // internal
-import logo from '@assets/img/logo/logo.svg';
+import logo from '@assets/img/logo/splendid_logo.png';
 import pay from '@assets/img/footer/footer-pay.png';
 import social_data from '@/data/social-data';
 import { Email, Location } from '@/svg';
 
-const Footer = ({ style_2 = false, style_3 = false,primary_style=false }) => {
+const Footer = ({ style_2 , style_3 = false,primary_style=false }) => {
   return (
     <footer>
       <div className={`tp-footer-area ${primary_style?'tp-footer-style-2 tp-footer-style-primary tp-footer-style-6':''} ${style_2 ?'tp-footer-style-2':style_3 ? 'tp-footer-style-2 tp-footer-style-3': ''}`}
-        data-bg-color={`${style_2 ? 'footer-bg-white' : 'footer-bg-grey'}`}>
+        data-bg-color={`${style_2 ? 'footer-bg-white' : 'footer-bg-black'}`}>
         <div className="tp-footer-top pt-95 pb-40">
           <div className="container">
             <div className="row">
               <div className="col-xl-4 col-lg-3 col-md-4 col-sm-6">
                 <div className="tp-footer-widget footer-col-1 mb-50">
                   <div className="tp-footer-widget-content">
-                    <div className="tp-footer-logo">
-                      <Link href="/">
-                        <Image src={logo} alt="logo" />
-                      </Link>
-                    </div>
+                   
                     <p className="tp-footer-desc">We are a dynamic team of full stack developers and designers crafting high-quality web applications</p>
                     <div className="tp-footer-social">
                       {social_data.map(s => <a href={s.link} key={s.id} target="_blank">

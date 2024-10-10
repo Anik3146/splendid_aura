@@ -55,7 +55,9 @@ const Menus = () => {
     <ul>
       {menu_data.map((menu) =>
         menu.homes ? (
+          
           <li key={menu.id} className="has-dropdown has-mega-menu">
+            {/* home */}
             <Link href={menu.link}>{menu.title}</Link>
             <div className="home-menu tp-submenu tp-mega-menu">
             {/* <div className="tp-product-arrival-slider fix">
@@ -73,6 +75,7 @@ const Menus = () => {
                 {menu.home_pages.map((home, i) => (
                   <div key={i} className="col">
                     <div className="home-menu-item">
+                
                       {/* <Link href={home.link}>
                         <div className="home-menu-thumb p-relative fix">
                           <Image src={home.img} alt="home img" />
@@ -89,16 +92,19 @@ const Menus = () => {
           </li>
         ) : menu.products ? (
           <li key={menu.id} className="has-dropdown has-mega-menu ">
+            {/* products dropdown */}
             <Link href={menu.link}>{menu.title}</Link>
             <ul className="tp-submenu tp-mega-menu mega-menu-style-2">
               {menu.product_pages.map((p, i) => (
                 <li key={i} className="has-dropdown">
+          
                   <Link href={p.link} className="mega-menu-title">
                     {p.title}
                   </Link>
                   <ul className="tp-submenu">
                     {p.mega_menus.map((m, i) => (
                       <li key={i}>
+                      
                         <Link href={m.link}>{m.title}</Link>
                       </li>
                     ))}
@@ -109,6 +115,7 @@ const Menus = () => {
           </li>
         ) : menu.sub_menu ? (
           <li key={menu.id} className="has-dropdown">
+            {/*Blog */}
             <Link href={menu.link}>{menu.title}</Link>
             <ul className="tp-submenu">
               {menu.sub_menus.map((b, i) => (
@@ -120,6 +127,7 @@ const Menus = () => {
           </li>
         ) : (
           <li key={menu.id}>
+            {/* contact */}
             <Link href={menu.link}>{menu.title}</Link>
           </li>
         )

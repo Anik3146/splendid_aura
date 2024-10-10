@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import SEO from '@/components/seo';
 import Wrapper from '@/layout/wrapper';
 import HeaderTwo from '@/layout/headers/header-2';
-import Footer from '@/layout/footers/footer';
+import FooterTwo from "@/layout/footers/footer-2";
 import CommonBreadcrumb from '@/components/breadcrumb/common-breadcrumb';
 import CheckoutArea from '@/components/checkout/checkout-area';
 
@@ -24,7 +24,7 @@ const CheckoutPage = () => {
       <HeaderTwo style_2={true} />
       <CommonBreadcrumb title="Checkout" subtitle="Checkout" bg_clr={true} />
       <CheckoutArea/>
-      <Footer style_2={true} />
+      <FooterTwo />
     </Wrapper>
   );
 };

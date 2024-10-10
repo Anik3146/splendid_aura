@@ -2,7 +2,7 @@ import React from 'react';
 // internal
 import SEO from '@/components/seo';
 import HeaderTwo from '@/layout/headers/header-2';
-import Footer from '@/layout/footers/footer';
+import FooterTwo from "@/layout/footers/footer-2";
 import Wrapper from '@/layout/wrapper';
 import ErrorMsg from '@/components/common/error-msg';
 import { useGetProductQuery } from '@/redux/features/productApi';
@@ -33,7 +33,7 @@ const ProductDetailsPage = ({ query }) => {
       <SEO pageTitle="Product Details" />
       <HeaderTwo style_2={true} />
       {content}
-      <Footer primary_style={true} />
+      <FooterTwo />
     </Wrapper>
   );
 };

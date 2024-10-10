@@ -15,7 +15,7 @@ import NewArrivals from "@/components/products/electronics/new-arrivals";
 import BlogArea from "@/components/blog/electronic/blog-area";
 import InstagramArea from "@/components/instagram/instagram-area";
 import CtaArea from "@/components/cta/cta-area";
-import Footer from "@/layout/footers/footer";
+import FooterTwo from "@/layout/footers/footer-2";
 
 const HomeTwo = () => {
   return (
@@ -35,7 +35,7 @@ const HomeTwo = () => {
       <BlogArea/>
       <InstagramArea/>
       <CtaArea/>
-      <Footer/>
+      <FooterTwo/>
     </Wrapper>
   );
 };

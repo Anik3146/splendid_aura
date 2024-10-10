@@ -6,7 +6,7 @@ import ShopBreadcrumb from "@/components/breadcrumb/shop-breadcrumb";
 import ShopArea from "@/components/shop/shop-area";
 import { useGetAllProductsQuery } from "@/redux/features/productApi";
 import ErrorMsg from "@/components/common/error-msg";
-import Footer from "@/layout/footers/footer";
+import FooterTwo from "@/layout/footers/footer-2";
 import ShopFilterOffCanvas from "@/components/common/shop-filter-offcanvas";
 import ShopLoader from "@/components/loader/shop/shop-loader";
 
@@ -161,7 +161,7 @@ const ShopPage = ({ query }) => {
       <HeaderTwo style_2={true} />
       <ShopBreadcrumb title="Shop Grid" subtitle="Shop Grid" />
       {content}
-      <Footer primary_style={true} />
+      <FooterTwo />
     </Wrapper>
   );
 };
