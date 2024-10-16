@@ -22,6 +22,7 @@ const schema = Yup.object().shape({
 
 const ForgotPassword = ({ params }) => {
   const token = params.token;
+  const router = useRouter();
   const [showPass, setShowPass] = useState(false);
   const [showConPass, setShowConPass] = useState(false);
   const [confirmForgotPassword, { }] = useConfirmForgotPasswordMutation();
@@ -37,9 +38,13 @@ const ForgotPassword = ({ params }) => {
     }).then((result) => {
       if (result?.error) {
         notifyError(result?.error?.data?.error)
+        router.push("/login");
       } 
       else {
         notifySuccess(result?.data?.message);
+        setTimeout(()=>{
+          router.push("/login");
+        },[2000])
       }
     });
     reset();

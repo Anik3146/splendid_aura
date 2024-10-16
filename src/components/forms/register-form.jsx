@@ -39,7 +39,9 @@ const RegisterForm = () => {
         notifyError("Register Failed");
       } else {
         notifySuccess(result?.data?.message);
-        // router.push(redirect || "/");
+        setTimeout(()=>{
+          router.push("/");
+        },[3000]);
       }
     });
     reset();

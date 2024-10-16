@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedOut } from "@/redux/features/auth/authSlice";
-
+import { notifyError, notifySuccess } from "@/utils/toast";
 // language
 function Language({active,handleActive}) {
   return (
@@ -66,8 +66,11 @@ function ProfileSetting({active,handleActive}) {
   const router = useRouter();
   // handle logout
   const handleLogout = () => {
-    dispatch(userLoggedOut());
-    router.push('/')
+    notifySuccess("Logout successful!!");
+    setTimeout(()=>{
+      dispatch(userLoggedOut());
+      router.push('/login')
+    },[3000]);
   }
   return (
     <div className="tp-header-top-menu-item tp-header-setting">

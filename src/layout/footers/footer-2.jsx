@@ -7,6 +7,7 @@ import { Email, Location } from '@/svg';
 import logo from '@assets/img/logo/logo.svg';
 import pay from '@assets/img/footer/footer-pay.png';
 
+
 const FooterTwo = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const FooterTwo = () => {
                   <div className="tp-footer-widget footer-col-4-1 mb-50">
                     <div className="tp-footer-widget-content">
                       <div className="tp-footer-talk mb-20">
+                        
                         <span className='text-white'>Got Questions? Call us</span>
                         <h4><a className='text-white' href="tel:670-413-90-762">+670 413 90 762</a></h4>
                       </div>

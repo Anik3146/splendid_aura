@@ -39,7 +39,9 @@ const LoginForm = () => {
       .then((data) => {
         if (data?.data) {
           notifySuccess("Login successfully");
-          router.push(redirect || "/");
+          setTimeout(()=>{
+            router.push("/");
+          },[3000]);
         }
         else {
           notifyError(data?.error?.data?.error)

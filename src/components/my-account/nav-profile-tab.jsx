@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 // internal
 import { Box, DeliveryTwo, Processing, Truck } from "@/svg";
 import { userLoggedOut } from "@/redux/features/auth/authSlice";
+import { notifyError, notifySuccess } from "@/utils/toast";
 
 const NavProfileTab = ({ orderData }) => {
   const {user} = useSelector(state => state.auth)
@@ -12,7 +13,7 @@ const NavProfileTab = ({ orderData }) => {
   // handle logout
   const handleLogout = () => {
     dispatch(userLoggedOut());
-    router.push('/')
+    router.push("/login");
   }
   return (
     <div className="profile__main">
@@ -25,13 +26,14 @@ const NavProfileTab = ({ orderData }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          {/*   <div className="col-md-6">
             <div className="profile__main-logout text-sm-end">
               <a onClick={handleLogout} className="cursor-pointer tp-logout-btn">
-                Logout
+                Logout 
               </a>
             </div>
-          </div>
+          </div>*/}
+        
         </div>
       </div>
       <div className="profile__main-info">
