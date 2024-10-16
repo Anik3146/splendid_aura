@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
@@ -25,10 +25,22 @@ import OffCanvas from "@/components/common/off-canvas";
 const HeaderTwo = ({ style_2 = true }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
   const [isOffCanvasOpen, setIsCanvasOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
   const { setSearchText, handleSubmit, searchText } = useSearchFormSubmit();
   const { quantity } = useCartInfo();
   const { sticky } = useSticky();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 576);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <header>
@@ -45,18 +57,15 @@ const HeaderTwo = ({ style_2 = true }) => {
                     <div className="tp-header-info-item ">
                       <a href="#">
                         <span className="text-white">
-                          <Facebook />{" "} 2.2k Followers
+                          <Facebook /> 2.2k Followers
                         </span>{" "}
-                    
-                   
                       </a>
                     </div>
                     <div className="tp-header-info-item">
                       <a href="tel:966-595-035-008">
                         <span className="text-white">
-                          <PhoneTwo />{" "}  +01742959042
+                          <PhoneTwo /> +01742959042
                         </span>{" "}
-                       
                       </a>
                     </div>
                   </div>
@@ -80,7 +89,10 @@ const HeaderTwo = ({ style_2 = true }) => {
               <div className="tp-mega-menu-wrapper p-relative">
                 <div className="row align-items-center">
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
-                    <div className="logo">
+                    <div
+                      className="logo"
+                      style={{ display: isMobile ? "none" : "block" }}
+                    >
                       <Link href="/">
                         <Image
                           src={logo}
@@ -88,6 +100,20 @@ const HeaderTwo = ({ style_2 = true }) => {
                           priority
                           width={80}
                           height={80}
+                        />
+                      </Link>
+                    </div>
+                    <div
+                      className="logo"
+                      style={{ display: isMobile ? "block" : "none" }}
+                    >
+                      <Link href="/">
+                        <Image
+                          src={logo}
+                          alt="logo"
+                          priority
+                          width={50}
+                          height={50}
                         />
                       </Link>
                     </div>
