@@ -6,6 +6,7 @@ import social_data from "@/data/social-data";
 import { Email, Location } from "@/svg";
 import logo from "@assets/img/logo/logo.svg";
 import pay from "@assets/img/footer/footer-pay.png";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const FooterTwo = () => {
   return (
@@ -222,6 +223,21 @@ const FooterTwo = () => {
           </div>
         </div>
       </footer>
+      <FloatingWhatsApp
+        phoneNumber="+8801786636915"
+        accountName="Splendid Aura Team"
+        avatar="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+        allowEsc
+        allowClickAway
+        notification
+        notificationSound
+        style={{
+          position: "fixed",
+          left: "10px !important",
+          bottom: "20px",
+          zIndex: 10,
+        }}
+      />
     </>
   );
 };
