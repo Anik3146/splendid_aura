@@ -11,7 +11,6 @@ const FooterTwo = ({ year }) => {
   return (
     <>
       <footer>
-        <WhatsApp />
         <div
           className="tp-footer-area tp-footer-style-2 tp-footer-style-3 tp-footer-style-4"
           data-bg-color="#CE4584"
