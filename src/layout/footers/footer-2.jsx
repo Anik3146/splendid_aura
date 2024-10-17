@@ -4,10 +4,10 @@ import Link from "next/link";
 // internal
 import social_data from "@/data/social-data";
 import { Email, Location } from "@/svg";
+import logo from "@assets/img/logo/logo.svg";
 import pay from "@assets/img/footer/footer-pay.png";
-import WhatsApp from "@/components/whatsApp/whatsapp";
 
-const FooterTwo = ({ year }) => {
+const FooterTwo = () => {
   return (
     <>
       <footer>
@@ -73,11 +73,92 @@ const FooterTwo = ({ year }) => {
                     </div>
                   </div>
                 </div>
-                {/* Other columns remain unchanged */}
+                <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                  <div className="tp-footer-widget footer-col-4-2 mb-50">
+                    <h4 className="tp-footer-widget-title text-white">
+                      My Account
+                    </h4>
+                    <div className="tp-footer-widget-content">
+                      <ul>
+                        <li>
+                          <a className="text-white" href="#">
+                            Track Orders
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Shipping
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Wishlist
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            My Account
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Order History
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Returns
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-3 col-lg-2 col-md-4 col-sm-5">
+                  <div className="tp-footer-widget footer-col-4-3 mb-50">
+                    <h4 className="tp-footer-widget-title text-white">
+                      Infomation
+                    </h4>
+                    <div className="tp-footer-widget-content">
+                      <ul>
+                        <li>
+                          <a className="text-white" href="#">
+                            Our Story
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Careers
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Privacy Policy
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Terms & Conditions
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Latest News
+                          </a>
+                        </li>
+                        <li>
+                          <a className="text-white" href="#">
+                            Contact Us
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-7">
                   <div className="tp-footer-widget footer-col-4-4 mb-50">
                     <h4 className="tp-footer-widget-title text-white">
-                      Subscribe.
+                      Subcribe.
                     </h4>
                     <div className="tp-footer-widget-content">
                       <div className="tp-footer-subscribe">
@@ -119,9 +200,9 @@ const FooterTwo = ({ year }) => {
                   <div className="col-md-6">
                     <div className="tp-footer-copyright">
                       <p className="text-white">
-                        © {year} All Rights Reserved | Next js Template by
+                        © {new Date().getFullYear()} All Rights Reserved | Next
+                        js Template by
                         <Link className="text-white" href="/">
-                          {" "}
                           ThemePure
                         </Link>
                         .
@@ -144,14 +225,5 @@ const FooterTwo = ({ year }) => {
     </>
   );
 };
-
-export async function getServerSideProps() {
-  const year = new Date().getFullYear(); // You can fetch data here if needed
-  return {
-    props: {
-      year, // Pass the year as a prop
-    },
-  };
-}
 
 export default FooterTwo;
