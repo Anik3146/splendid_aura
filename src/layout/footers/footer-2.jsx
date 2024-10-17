@@ -6,9 +6,11 @@ import social_data from "@/data/social-data";
 import { Email, Location } from "@/svg";
 import logo from "@assets/img/logo/logo.svg";
 import pay from "@assets/img/footer/footer-pay.png";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
+import ReactWhatsappButton from "react-whatsapp-button";
 
 const FooterTwo = () => {
+  const isMobile = window.innerWidth <= 768; // Define your mobile breakpoint
+
   return (
     <>
       <footer>
@@ -223,20 +225,22 @@ const FooterTwo = () => {
           </div>
         </div>
       </footer>
-      <FloatingWhatsApp
-        phoneNumber="+8801786636915"
-        accountName="Splendid Aura Team"
-        avatar="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-        allowEsc
-        allowClickAway
-        notification
-        notificationSound
+
+      <ReactWhatsappButton
+        countryCode="880"
+        phoneNumber="1786636915"
         style={{
+          backgroundColor: "#25D366",
           position: "fixed",
-          left: "10px !important",
-          bottom: "20px",
-          zIndex: 10,
+          bottom: isMobile ? "45px" : "20px", // Adjust for vertical positioning
+          left: "20px", // Fixed to the left side
+          width: isMobile ? "45px" : "70px", // Smaller for mobile
+          height: isMobile ? "45px" : "70px", // Smaller for mobile
+          borderRadius: "50%", // Keep it circular
+          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
         }}
+        animated
+        message="contact us on whatsapp!"
       />
     </>
   );
