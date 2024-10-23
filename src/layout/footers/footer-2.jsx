@@ -8,6 +8,7 @@ import logo from "@assets/img/logo/logo.svg";
 import pay from "@assets/img/footer/footer-pay.png";
 import ReactWhatsappButton from "react-whatsapp-button";
 
+
 const FooterTwo = () => {
   const isMobile = window.innerWidth <= 768; // Define your mobile breakpoint
 
@@ -240,8 +241,10 @@ const FooterTwo = () => {
           boxShadow: "0 2px 5px rgba(0, 0, 0, 0.3)", // Optional shadow for depth
         }}
         animated
-        message="contact us on whatsapp!"
+        message="Is there anybody available to chat?"
       />
+
+     
     </>
   );
 };
