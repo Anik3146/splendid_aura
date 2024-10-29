@@ -102,7 +102,7 @@ To get started with Shofy, follow these steps:
 
 ## Server Side Live Link
 
-[Shofy Fashion Server Side Live Link](https://splendid-aura-backend.vercel.app/)
+[Shofy Fashion Server Side Live Link](https://splendid-aura-backend.vercel.app)
 
 ## Client Side Repo
 

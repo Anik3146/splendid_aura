@@ -5,18 +5,17 @@ export const categoryApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     addCategory: builder.mutation({
       query: (data) => ({
-        url: "https://splendid-aura-backend.vercel.app//api/category/add",
+        url: "https://splendid-aura-backend.vercel.app/api/category/add",
         method: "POST",
         body: data,
       }),
     }),
     getShowCategory: builder.query({
-      query: () =>
-        `https://splendid-aura-backend.vercel.app//api/category/show`,
+      query: () => `https://splendid-aura-backend.vercel.app/api/category/show`,
     }),
     getProductTypeCategory: builder.query({
       query: (type) =>
-        `https://splendid-aura-backend.vercel.app//api/category/show/${type}`,
+        `https://splendid-aura-backend.vercel.app/api/category/show/${type}`,
     }),
   }),
 });
